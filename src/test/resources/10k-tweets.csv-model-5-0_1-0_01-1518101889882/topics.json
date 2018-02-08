@@ -1,0 +1,331 @@
+[ {
+  "id" : "0",
+  "words" : [ {
+    "value" : "hacer",
+    "score" : 0.028792428446539207
+  }, {
+    "value" : "ver",
+    "score" : 0.026207761602493444
+  }, {
+    "value" : "ser",
+    "score" : 0.024478315405374585
+  }, {
+    "value" : "Aitana",
+    "score" : 0.02195066327112395
+  }, {
+    "value" : "Barcelona",
+    "score" : 0.021722604431943442
+  }, {
+    "value" : "haber",
+    "score" : 0.020943403398076703
+  }, {
+    "value" : "Roi",
+    "score" : 0.01963206507278878
+  }, {
+    "value" : "Plaza",
+    "score" : 0.016591280550381997
+  }, {
+    "value" : "ir",
+    "score" : 0.015850089323045345
+  }, {
+    "value" : "tener",
+    "score" : 0.01571705500019005
+  }, {
+    "value" : "dignidad",
+    "score" : 0.015203922612033904
+  }, {
+    "value" : "salarial",
+    "score" : 0.015203922612033904
+  }, {
+    "value" : "Urquinaona",
+    "score" : 0.015203922612033904
+  }, {
+    "value" : "llorar",
+    "score" : 0.015032878482648523
+  }, {
+    "value" : "Alfred",
+    "score" : 0.01269527538104831
+  }, {
+    "value" : "Miriam",
+    "score" : 0.011611995894940894
+  }, {
+    "value" : "puta",
+    "score" : 0.011402941959025428
+  }, {
+    "value" : "demonio",
+    "score" : 0.010661750731688775
+  }, {
+    "value" : "preguntar",
+    "score" : 0.010661750731688775
+  }, {
+    "value" : "votar",
+    "score" : 0.010091603633737505
+  }, {
+    "value" : "LLORANDO",
+    "score" : 0.010034588923942376
+  } ]
+}, {
+  "id" : "1",
+  "words" : [ {
+    "value" : "Oficial",
+    "score" : 0.09595640499131258
+  }, {
+    "value" : "OT",
+    "score" : 0.07972674143105354
+  }, {
+    "value" : "imagen",
+    "score" : 0.07481045648396778
+  }, {
+    "value" : "Gala",
+    "score" : 0.07342836834623283
+  }, {
+    "value" : "novedad",
+    "score" : 0.07336913599747276
+  }, {
+    "value" : "Cambia",
+    "score" : 0.07297425367240562
+  }, {
+    "value" : "BOMBAZO",
+    "score" : 0.07190807139472437
+  }, {
+    "value" : "salir",
+    "score" : 0.012458537355867952
+  }, {
+    "value" : "tener",
+    "score" : 0.012063655030800821
+  }, {
+    "value" : "repartir",
+    "score" : 0.011767493287000474
+  }, {
+    "value" : "honor",
+    "score" : 0.010385405149265519
+  }, {
+    "value" : "robarse",
+    "score" : 0.009161269941557415
+  }, {
+    "value" : "ganado",
+    "score" : 0.009161269941557415
+  }, {
+    "value" : "palmarito",
+    "score" : 0.009161269941557415
+  }, {
+    "value" : "maldito",
+    "score" : 0.009161269941557415
+  }, {
+    "value" : "vago",
+    "score" : 0.009161269941557415
+  }, {
+    "value" : "protestar",
+    "score" : 0.009161269941557415
+  }, {
+    "value" : "dictadura",
+    "score" : 0.009161269941557415
+  }, {
+    "value" : "macho",
+    "score" : 0.009161269941557415
+  }, {
+    "value" : "ser",
+    "score" : 0.006634023061127784
+  }, {
+    "value" : "partido",
+    "score" : 0.005666561364713316
+  } ]
+}, {
+  "id" : "2",
+  "words" : [ {
+    "value" : "ser",
+    "score" : 0.07031756318859365
+  }, {
+    "value" : "tener",
+    "score" : 0.029974076474400518
+  }, {
+    "value" : "especial",
+    "score" : 0.0220349967595593
+  }, {
+    "value" : "bueno",
+    "score" : 0.01975048606610499
+  }, {
+    "value" : "ir",
+    "score" : 0.01450097213220998
+  }, {
+    "value" : "parte",
+    "score" : 0.014095917044718081
+  }, {
+    "value" : "semana",
+    "score" : 0.013723266364225535
+  }, {
+    "value" : "fin",
+    "score" : 0.013318211276733636
+  }, {
+    "value" : "saludo",
+    "score" : 0.013253402462734931
+  }, {
+    "value" : "academia",
+    "score" : 0.01270252754374595
+  }, {
+    "value" : "echar",
+    "score" : 0.012621516526247569
+  }, {
+    "value" : "compensar",
+    "score" : 0.012232663642255347
+  }, {
+    "value" : "pasar",
+    "score" : 0.011390149060272197
+  }, {
+    "value" : "lanzar",
+    "score" : 0.009332469215813351
+  }, {
+    "value" : "mejor",
+    "score" : 0.008538561244329229
+  }, {
+    "value" : "cosita",
+    "score" : 0.008084899546338302
+  }, {
+    "value" : "Golosinas",
+    "score" : 0.00797148412184057
+  }, {
+    "value" : "pack",
+    "score" : 0.00797148412184057
+  }, {
+    "value" : "haber",
+    "score" : 0.007874270900842514
+  }, {
+    "value" : "vida",
+    "score" : 0.007825664290343487
+  }, {
+    "value" : "decir",
+    "score" : 0.0052171095268956575
+  } ]
+}, {
+  "id" : "3",
+  "words" : [ {
+    "value" : "ser",
+    "score" : 0.05966943622824358
+  }, {
+    "value" : "Alfred",
+    "score" : 0.03222402235467233
+  }, {
+    "value" : "haber",
+    "score" : 0.02487403201593365
+  }, {
+    "value" : "ir",
+    "score" : 0.022666805392470162
+  }, {
+    "value" : "Amaia",
+    "score" : 0.019515747855943164
+  }, {
+    "value" : "hacer",
+    "score" : 0.01635725857994322
+  }, {
+    "value" : "tener",
+    "score" : 0.015963376387877346
+  }, {
+    "value" : "Roi",
+    "score" : 0.015532335498446766
+  }, {
+    "value" : "ver",
+    "score" : 0.013800740201251506
+  }, {
+    "value" : "Aitana",
+    "score" : 0.01325822321972681
+  }, {
+    "value" : "jurado",
+    "score" : 0.01305013451448446
+  }, {
+    "value" : "Ana",
+    "score" : 0.011957668811962127
+  }, {
+    "value" : "decir",
+    "score" : 0.011065860075209204
+  }, {
+    "value" : "poder",
+    "score" : 0.01038957178317157
+  }, {
+    "value" : "dar",
+    "score" : 0.010188914817402162
+  }, {
+    "value" : "Miriam",
+    "score" : 0.009973394372686871
+  }, {
+    "value" : "finalista",
+    "score" : 0.009438309130635116
+  }, {
+    "value" : "Agoney",
+    "score" : 0.008925519107002185
+  }, {
+    "value" : "pasar",
+    "score" : 0.008858633451745715
+  }, {
+    "value" : "final",
+    "score" : 0.008256662554437492
+  }, {
+    "value" : "saber",
+    "score" : 0.007721577312385737
+  } ]
+}, {
+  "id" : "4",
+  "words" : [ {
+    "value" : "haber",
+    "score" : 0.08403713385615658
+  }, {
+    "value" : "ser",
+    "score" : 0.04723842080568403
+  }, {
+    "value" : "cantar",
+    "score" : 0.0348883973456666
+  }, {
+    "value" : "Amaia",
+    "score" : 0.03393323949326362
+  }, {
+    "value" : "Aitana",
+    "score" : 0.023795160533547823
+  }, {
+    "value" : "Ana",
+    "score" : 0.023728131912326565
+  }, {
+    "value" : "venir",
+    "score" : 0.021080501374086735
+  }, {
+    "value" : "nuevo",
+    "score" : 0.020577786714927274
+  }, {
+    "value" : "poner",
+    "score" : 0.02054427240431664
+  }, {
+    "value" : "siguiente",
+    "score" : 0.019840471881493398
+  }, {
+    "value" : "quitar",
+    "score" : 0.019706414639050873
+  }, {
+    "value" : "coger",
+    "score" : 0.01925397144580736
+  }, {
+    "value" : "jersey",
+    "score" : 0.019019371271532946
+  }, {
+    "value" : "permiso",
+    "score" : 0.019019371271532946
+  }, {
+    "value" : "hacer",
+    "score" : 0.018868556873785105
+  }, {
+    "value" : "Fan",
+    "score" : 0.018617199544205376
+  }, {
+    "value" : "etiqueta",
+    "score" : 0.018516656612373485
+  }, {
+    "value" : "papo",
+    "score" : 0.018516656612373485
+  }, {
+    "value" : "examen",
+    "score" : 0.017963670487298078
+  }, {
+    "value" : "aprobar",
+    "score" : 0.01729338427508546
+  }, {
+    "value" : "concur",
+    "score" : 0.01725986996447483
+  } ]
+} ]

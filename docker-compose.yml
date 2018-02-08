@@ -1,0 +1,12 @@
+version: '2'
+services:
+  learner:
+    image: librairy/learner-tweets-service:latest
+    ports:
+    - "8080:7777"
+    volumes:
+    - .:/mnt
+    links:
+    - nlp-es-service
+  nlp-es-service:
+    image: librairy/nlp-es-service:latest
