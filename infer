@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+curl -X POST "http://localhost:8080/inference" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"corpus\": { \"idIndex\": 0, \"language\": \"ES\", \"path\": \""$1"\", \"separator\": \";;\", \"textIndex\": 1 }, \"model\": \""$2"\"}"

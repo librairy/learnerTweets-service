@@ -47,4 +47,19 @@ public class MyServiceTest {
         LOG.info("completed!");
 //        Assert.assertEquals(2, annotations.size());
     }
+
+    @Test
+    @Ignore
+    public void inference() throws IOException, InterruptedException {
+
+
+        Corpus corpus = Corpus.newBuilder().setPath("src/test/resources/1k-tweets.csv").setLanguage(Language.ES).setSeparator(";;").setTextIndex(1).build();
+
+        String result = service.inference(corpus, "src/test/resources/1k-tweets.csv-model-5-0_1-0_001-1518187084497");
+
+        LOG.info("Result: " + result);
+        Thread.sleep(20000);
+        LOG.info("completed!");
+//        Assert.assertEquals(2, annotations.size());
+    }
 }

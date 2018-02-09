@@ -29,7 +29,7 @@ docker-compose logs -f
 ./build 1k-tweets.csv
 ```
 
-6.- Finally, check again the service is working on that
+6.- Finally, check again the service is working on that:
 ```sh
 docker-compose logs -f
 ```
@@ -47,6 +47,8 @@ And there, the following files will be available:
 4.- **topics**: summary of topics and words
 5.- **vocabulary**: all the words used in the model
 
-
-
+Now, you can infer topic distributions for new tweets by using the existing model:
+```sh
+./infer 1k-tweets.csv 1k-tweets.csv-model-*
+```
 

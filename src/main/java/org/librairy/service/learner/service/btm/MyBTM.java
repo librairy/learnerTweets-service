@@ -30,6 +30,7 @@ import java.util.stream.Stream;
 public class MyBTM {
 
     private static final Logger LOG = LoggerFactory.getLogger(MyBTM.class);
+    private String language;
 
     private String data_path;
     private String outputPath;
@@ -59,10 +60,11 @@ public class MyBTM {
 
     public MyBTM(String data_path, String language, String separator, Integer textIndex) {
         this.data_path = data_path;
+        this.language = language;
         this.load_data(language, separator, textIndex);
     }
 
-    private void load_data(String language, String separator, Integer textIndex) {
+    public void load_data(String language, String separator, Integer textIndex) {
         try {
             AvroClient client = new AvroClient();
 
@@ -149,6 +151,7 @@ public class MyBTM {
         btm.wordTopicMatrix         = model.getWordTopicMatrix();
         btm.numberOfBitermsPerTopic = model.getNumberOfBitermsPerTopic();
         btm.numberOfWords           = model.getNumberOfWords();
+        btm.language                = model.getLanguage();
 
 
         Path vocabularyPath = Paths.get(modelPath, "vocabulary.txt");
@@ -179,6 +182,27 @@ public class MyBTM {
 
 
     private void init_model() {
+        createBiterms();
+
+        this.numberOfWords = this.vocabulary.getSize();
+
+        this.topicPerBiterm     = new int[this.bitermCorpus.size()];
+        this.wordTopicMatrix    = new Matrix(this.numberOfWords,this.numberOfTopics);
+        this.numberOfBitermsPerTopic = new int[this.numberOfTopics];
+
+        for(int bitermIndex = 0; bitermIndex<this.bitermCorpus.size(); bitermIndex++){
+            int topicId = (int) (Math.random() * this.numberOfTopics);
+            BiTerm biterm = this.bitermCorpus.get(bitermIndex);
+            int term1 = biterm.getWord1();
+            int term2 = biterm.getWord2();
+            this.wordTopicMatrix.increment(term1, topicId);
+            this.wordTopicMatrix.increment(term2, topicId);
+            this.numberOfBitermsPerTopic[topicId] += 1;
+            this.topicPerBiterm[bitermIndex] = topicId;
+        }
+    }
+
+    private void createBiterms(){
         int docIndex = 0;
         for(Document doc:this.corpus.getDocuments()){
             HashMap<BiTerm, Integer> docBiterms = new HashMap<>();
@@ -197,23 +221,6 @@ public class MyBTM {
             }
             docIndex++;
             this.bitermsPerDocument.add(docBiterms);
-        }
-
-        this.numberOfWords = this.vocabulary.getSize();
-
-        this.topicPerBiterm     = new int[this.bitermCorpus.size()];
-        this.wordTopicMatrix    = new Matrix(this.numberOfWords,this.numberOfTopics);
-        this.numberOfBitermsPerTopic = new int[this.numberOfTopics];
-
-        for(int bitermIndex = 0; bitermIndex<this.bitermCorpus.size(); bitermIndex++){
-            int topicId = (int) (Math.random() * this.numberOfTopics);
-            BiTerm biterm = this.bitermCorpus.get(bitermIndex);
-            int term1 = biterm.getWord1();
-            int term2 = biterm.getWord2();
-            this.wordTopicMatrix.increment(term1, topicId);
-            this.wordTopicMatrix.increment(term2, topicId);
-            this.numberOfBitermsPerTopic[topicId] += 1;
-            this.topicPerBiterm[bitermIndex] = topicId;
         }
     }
 
@@ -356,6 +363,20 @@ public class MyBTM {
         LOG.info("theta saved");
     }
 
+
+    public void inference(File corpus, String separator, Integer textIndex) throws IOException {
+
+        this.data_path = corpus.getAbsolutePath();
+        this.load_data(language, separator, textIndex);
+
+        File dataFile = new File(data_path);
+        this.outputPath = (dataFile).getParentFile().getAbsolutePath() + "/"+dataFile.getName()+"-inference-"+ numberOfTopics+"-" + String.valueOf(alpha).replace(".","_")+ "-" + String.valueOf(beta).replace(".","_") + "-" + System.currentTimeMillis()+ "/";
+        (new File(this.outputPath)).mkdirs();
+
+        createBiterms();
+        saveTheta();
+    }
+
     public double[] inference(HashMap<BiTerm,Integer> bitermsInDocument){
         Integer numBiterms = bitermsInDocument.entrySet().stream().map(entry -> entry.getValue()).reduce((a, b) -> a + b).get();
         double[] oneTheta = new double[this.numberOfTopics];
@@ -402,7 +423,6 @@ public class MyBTM {
         try {
             this.saveTopicWords(wordsPerTopic);
             this.saveTheta();
-//            this.save_tassign();
             this.saveVocabulary();
             this.savePhi();
             this.save_model();
@@ -426,6 +446,7 @@ public class MyBTM {
         model.setNumberOfWords(numberOfWords);
         model.setNumIterations(iter_num);
         model.setWordTopicMatrix(wordTopicMatrix);
+        model.setLanguage(language);
 
 
         writer.write(jsonMapper.writeValueAsString(model));

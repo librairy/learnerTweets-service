@@ -22,11 +22,11 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @RestController
-@RequestMapping("/train")
-@Api(tags="/train", description="build a new model")
-public class RestTrainController {
+@RequestMapping("/inference")
+@Api(tags="/inference", description="inference topic distributions from a given model")
+public class RestInferenceController {
 
-    private static final Logger LOG = LoggerFactory.getLogger(RestTrainController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(RestInferenceController.class);
 
     @Autowired
     LearnerService service;
@@ -41,14 +41,14 @@ public class RestTrainController {
 
     }
 
-    @ApiOperation(value = "confirmation", nickname = "postTrain", response=TrainResult.class)
+    @ApiOperation(value = "confirmation", nickname = "postInference", response=InferenceResult.class)
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = TrainResult.class),
+            @ApiResponse(code = 200, message = "Success", response = InferenceResult.class),
     })
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
-    public TrainResult train(@RequestBody TrainRequest request)  {
+    public InferenceResult inference(@RequestBody InferenceRequest request)  {
         try {
-            return new TrainResult(service.train(request.getCorpus(), request.getParameters(), request.getExtra()));
+            return new InferenceResult(service.inference(request.getCorpus(), request.getModel()));
         } catch (AvroRemoteException e) {
             throw new RuntimeException(e);
         }

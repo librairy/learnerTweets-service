@@ -14,6 +14,8 @@ public class Model {
     private int numberOfTopics;
     private int[] numberOfBitermsPerTopic;
     private int numberOfWords;
+    private String language;
+
 
     public Double getAlpha() {
         return alpha;
@@ -69,5 +71,13 @@ public class Model {
 
     public void setNumberOfWords(int numberOfWords) {
         this.numberOfWords = numberOfWords;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 }
